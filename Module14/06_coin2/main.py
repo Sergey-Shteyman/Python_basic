@@ -1,5 +1,5 @@
 def coin_coordinates(x, y, r):
-    if abs(x) <= r and abs(y) <= r:
+    if x * x + y * y <= r * r:
         return "Монетка где-то рядом"
     else:
         return "Монетки в области нет"
