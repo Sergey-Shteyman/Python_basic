@@ -3,8 +3,7 @@ list_of_cards = []
 new_list_of_cards = []
 for i in range(1, count_of_cards + 1):
     print(f"{i} Видеокарта: ", end='')
-    series = int(input())
-    list_of_cards.append(series)
+    list_of_cards.append(int(input()))
 max_series = max(list_of_cards)
 for i in list_of_cards:
     if i < max_series:
