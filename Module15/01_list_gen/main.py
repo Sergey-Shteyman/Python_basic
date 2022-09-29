@@ -1,6 +1,6 @@
-n = int(input("Ввудите целое число N: "))
-list = []
-for i in range(1, n + 1):
-    if i % 2 != 0:
-        list.append(i)
-print(list)
+number = int(input("Введите целое число N: "))
+lst = []
+for digit in range(1, number + 1):
+    if digit % 2 != 0:
+        lst.append(digit)
+print(f"Список из нечетных чисел от 1 до {number}:  {lst}" )

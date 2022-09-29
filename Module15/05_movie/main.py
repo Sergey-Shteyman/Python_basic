@@ -15,7 +15,7 @@ def movie_selection():
     if answer == "y" or answer == "Y":
         movie_selection()
     else:
-        print(films)
-        print(likes)
+        print(f"Весь список фильмов {films}", sep='\n')
+        print(f"Список любимых фильмов {likes}")
 
 movie_selection()
