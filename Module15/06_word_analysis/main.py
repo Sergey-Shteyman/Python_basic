@@ -1,5 +1,4 @@
 word = input("Введите слово: ")
-count_list = []
 count_same = 0
 for char in word:
     if word.count(char) == 1:
