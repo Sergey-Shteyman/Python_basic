@@ -21,8 +21,6 @@
 # print(t)
 # print(d)
 
-# TODO переписать программу
-
 first_main_lst = [1, 5, 3]
 second_list = [1, 5, 1, 5]
 third_lst = [1, 3, 1, 5, 3, 3]

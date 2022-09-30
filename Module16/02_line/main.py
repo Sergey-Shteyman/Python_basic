@@ -1,4 +1,3 @@
-# TODO здесь писать код
 def sorted_lst(lst):
     for step in range(len(lst) - 1):
         for index in range(len(lst) - 1 - step):
