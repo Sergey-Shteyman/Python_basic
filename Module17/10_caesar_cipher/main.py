@@ -1,7 +1,7 @@
-def get_index(smb, to_right, lst):
-    index = lst.index(smb)
-    if index + to_right > len(lst) - 1:
-        index = index + to_right - len(lst)
+def get_index(smb, to_right, encoding_lst):
+    index = encoding_lst.index(smb)
+    if index + to_right > len(encoding_lst) - 1:
+        index = index + to_right - len(encoding_lst)
     else:
         index += to_right
     return index

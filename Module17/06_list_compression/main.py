@@ -1,8 +1,8 @@
 import random
 
-len_lst = int(input('Кол-во чисел в списке: '))
+length = int(input('Кол-во чисел в списке: '))
 
-before = [random.randint(0, 2) for _ in range(len_lst)]
+before = [random.randint(0, 2) for _ in range(length)]
 print('Список до сжатия:', before)
 compress = [x for x in before if x > 0]
 count = len(before) - len(compress)
