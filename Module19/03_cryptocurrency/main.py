@@ -44,5 +44,25 @@ data = {
     ]
 }
 
+print("#1")
+for item in data:
+    print(data.get(item))
 
-# TODO здесь писать код
+print("\n#2")
+data["ETH"]["total_diff"] = 100
+print(data["ETH"].items())
+
+print("\n#3")
+data["tokens"][0]["fst_token_info"]["name"] = "doge"
+print(data["tokens"][0]["fst_token_info"].items())
+
+print("\n#4")
+total_out = data["tokens"][0].pop("total_out")
+data["ETH"]["total_out"] = total_out
+print(data["ETH"].items())
+
+print("\n#5")
+old_price = data["tokens"][1]["sec_token_info"].pop("price")
+data["tokens"][1]["sec_token_info"]["total_price"] = old_price
+print(data["tokens"][1]["sec_token_info"].items())
+
