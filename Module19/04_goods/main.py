@@ -24,4 +24,20 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+
+def get_key(dictionary, value):
+    for keys, values in dictionary.items():
+        if values == value:
+            return keys
+
+
+for product, value in store.items():
+    quantity = 0
+    price_per_item = 0
+    total_product_price = 0
+    for item in value:
+        quantity += item["quantity"]
+        price_per_item += item["price"]
+        total_product_price += item["quantity"] * item["price"]
+    print(f"{get_key(goods, product)} - {quantity} штук,"
+          f" стоимость {total_product_price:} рубля")
