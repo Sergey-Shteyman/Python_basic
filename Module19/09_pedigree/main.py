@@ -2,18 +2,18 @@ number_people = int(input('Введите количество человек: '
 data = dict()
 levels = dict()
 
-for i in range(1, number_people):
-    descendant_name, parent_name = input(f'{i} пара: ').split()
+for number in range(1, number_people):
+    descendant_name, parent_name = input(f'{number} пара: ').split()
     data[descendant_name] = parent_name
     levels[descendant_name] = 0
     levels[parent_name] = 0
 
-for i in data:
-    people = i
+for index in data:
+    people = index
     while people in data:
         people = data[people]
-        levels[i] += 1
+        levels[index] += 1
 
 print('\n“Высота” каждого члена семьи:')
-for i in sorted(levels):
-    print(i, levels[i])
+for index in sorted(levels):
+    print(index, levels[index])

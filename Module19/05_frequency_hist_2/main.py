@@ -7,7 +7,7 @@ for char in user_input:
 for key in sorted(original_frequencies.keys()):
     print(f"{key} : {original_frequencies[key]}")
 print("\nИнвертированный словарь частот:")
-for char, num in original_frequencies.items():
-    inverted_frequencies.setdefault(num, []).append(char)
-for i in inverted_frequencies:
-    print(i, ': ', inverted_frequencies[i], sep='')
+for char, number in original_frequencies.items():
+    inverted_frequencies.setdefault(number, []).append(char)
+for char in inverted_frequencies:
+    print(char, ': ', inverted_frequencies[i], sep='')
