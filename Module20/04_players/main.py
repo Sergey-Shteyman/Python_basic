@@ -4,4 +4,9 @@ players = {
     ("Rob", "Bobbin"): (12, 8, 2)
 }
 
-# TODO здесь писать код
+
+def unification_data(players):
+    return [key + value for key, value in players.items()]
+
+
+print(unification_data(players))
