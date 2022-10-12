@@ -38,6 +38,9 @@ def pairs_id_age(students):
 
 
 info_students = interests_of_students(students)
-print(f"Список пар 'ID студента — возраст': {pairs_id_age(students)}")
-print(f"Полный список интересов всех студентов: {info_students[0]}")
-print(f"\nОбщая длина всех фамилий студентов: {info_students[1]}")
+pairs = pairs_id_age(students)
+interests = info_students[0]
+lengt_names = info_students[1]
+print(f"Список пар 'ID студента — возраст': {pairs}")
+print(f"Полный список интересов всех студентов: {interests}")
+print(f"\nОбщая длина всех фамилий студентов: {lengt_names}")

@@ -1,4 +1,4 @@
-def tpl_sort(collection):
+def sort_collection(collection):
     for number in collection:
         if not isinstance(number, int):
             return collection
@@ -6,4 +6,4 @@ def tpl_sort(collection):
     return tuple(sorted(extra_collection))
 
 
-print(tpl_sort((6, 3, -1, 8, 4, 10, -5)))
+print(sort_collection((6, 3, -1, 8, 4, 10, -5)))

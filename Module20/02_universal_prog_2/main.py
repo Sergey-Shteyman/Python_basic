@@ -1,5 +1,5 @@
 def crypto(collection):
-    return [num for index, num in enumerate(collection[2:], start=2) if is_prime(index)]
+    return [number for index, number in enumerate(collection[2:], start=2) if is_prime(index)]
 
 
 def is_prime(number):
@@ -13,4 +13,5 @@ def is_prime(number):
         return False
 
 
-print(crypto('О Дивный Новый мир!'))
+prime_indexes = crypto('О Дивный Новый мир!')
+print(prime_indexes)

@@ -1,4 +1,4 @@
-all_families_dict = {
+all_families = {
     1: {
         "Сидоров Никита": 35,
         "Сидорова Алина": 34,
@@ -18,7 +18,7 @@ if list(family)[-1] == 'a':
     family = family[::-1]
     print(family)
 
-for key in all_families_dict.keys():
-    for values in all_families_dict[key].keys():
+for key in all_families.keys():
+    for values in all_families[key].keys():
         if family[:-1] in values.lower():
-            print(values, " ", all_families_dict[key][values])
+            print(values, " ", all_families[key][values])
