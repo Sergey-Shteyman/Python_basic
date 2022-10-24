@@ -13,5 +13,6 @@ def files_and_folders(path):
 
 
 abs_path = os.path.abspath(os.path.join('..', '..', '..', "SkillBox"))
-
+for i_elem in os.listdir(abs_path):
+    print(i_elem)
 files_and_folders(abs_path)
