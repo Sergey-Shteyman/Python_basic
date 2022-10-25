@@ -1,39 +1,30 @@
 import random
 
 
-def f(x, y):
-    x += random.randint(0, 10)
-    y += random.randint(0, 5)
-    return x / y
+def summation(x_coordinate, y_coordinate):
+    x_coordinate += random.randint(0, 10)
+    y_coordinate += random.randint(0, 5)
+    return x_coordinate / y_coordinate
 
 
-def f2(x, y):
-    x -= random.randint(0, 10)
-    y -= random.randint(0, 5)
-    return y / x
+def subtraction(x_coordinate, y_coordinate):
+    x_coordinate -= random.randint(0, 10)
+    y_coordinate -= random.randint(0, 5)
+    return y_coordinate / x_coordinate
 
 
 try:
-    file = open('coordinates.txt', 'r')
-    for line in file:
-        nums_list = line.split()
-        res1 = f(int(nums_list[0]), int(nums_list[1]))
-        try:
-            res2 = f2(int(nums_list[0]), int(nums_list[1]))
+    with open('coordinates.txt', 'r') as file:
+        for line in file:
+            nums_list = line.split()
+            res1 = summation(int(nums_list[0]), int(nums_list[1]))
+            res2 = subtraction(int(nums_list[0]), int(nums_list[1]))
             try:
                 number = random.randint(0, 100)
-                file_2 = open('result.txt', 'w')
-                my_list = sorted([res1, res2, number])
-                file_2.write(' '.join(my_list))
-            except Exception:
-                print("Что-то пошло не так")
-        except Exception:
-            print("Что-то пошло не так со второй функцией")
-        finally:
-            file.close()
-            file_2.close()
-except Exception:
-    print("Что-то пошло не так с первой функцией")
-
-
-# TODO отредактировать и исправить программу
+                with open('result.txt', 'w') as file_2:
+                    my_list = sorted([res1, res2, number])
+                    file_2.write(' '.join(my_list))
+            except FileNotFoundError:
+                print("Что-то пошло не так : ")
+except FileNotFoundError:
+    print("File 'coordinatex.txt' not found")
