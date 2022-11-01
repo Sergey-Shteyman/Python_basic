@@ -15,7 +15,7 @@ def wait_time(func: Callable) -> Callable:
     return wrapped_func
 
 
-def loging(func=Callable) -> Callable:
+def loging(func: Callable) -> Callable:
     """
     Декоратор, логирующий работу кода
     """

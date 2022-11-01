@@ -2,7 +2,7 @@ from typing import Callable, Any
 from datetime import datetime
 
 
-def loging(func=Callable) -> Callable:
+def loging(func: Callable) -> Callable:
     """ Декоратор, логирующий работу кода """
 
     def wrapped_func(*args, **kwargs) -> Any:

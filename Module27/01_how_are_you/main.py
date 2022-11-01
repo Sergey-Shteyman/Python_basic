@@ -2,7 +2,7 @@ from typing import Callable, Any
 import functools
 
 
-def how_are_you(func=Callable) -> Callable:
+def how_are_you(func: Callable) -> Callable:
     @functools.wraps(func)
     def wrapped_func(*args, **kwargs) -> Any:
         result = func(*args, **kwargs)
@@ -13,7 +13,7 @@ def how_are_you(func=Callable) -> Callable:
     return wrapped_func
 
 
-def loging(func=Callable) -> Callable:
+def loging(func: Callable) -> Callable:
     """
     Декоратор, логирующий работу кода
     """
