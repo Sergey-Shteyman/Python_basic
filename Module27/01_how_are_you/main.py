@@ -6,7 +6,7 @@ def how_are_you(func: Callable) -> Callable:
     @functools.wraps(func)
     def wrapped_func(*args, **kwargs) -> Any:
         result = func(*args, **kwargs)
-        input("Как дела? ")
+        _ = input("Как дела? ")
         print("А у меня не очень! Ладно, держи свою функцию.")
         return result
 

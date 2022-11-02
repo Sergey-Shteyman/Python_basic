@@ -14,7 +14,7 @@ def loging(func: Callable) -> Callable:
             result = func(*args, **kwargs)
             print("Функция успешно завершила работу!")
             return result
-        except BaseException as error:
+        except Exception as error:
             handle_error(error)
 
     def handle_error(error):
