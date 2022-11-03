@@ -20,18 +20,22 @@ class Figure(ABC):
 class MyMathMixin:
     @classmethod
     def circle_len(cls, radius):
+        """ Длина окружности """
         return 2 * pi * radius
 
     @classmethod
     def circle_square(cls, radius):
+        """ Площадь окружности """
         return pi * radius ** 2
 
     @classmethod
     def volume_cube(cls, side):
+        """ Объем куба """
         return side ** 3
 
     @classmethod
     def area_surface_square_sphere(cls, radius):
+        """ Площадь поверхности сферы """
         return 4 * pi * radius ** 2
 
 
@@ -39,9 +43,11 @@ class Circle(Figure, MyMathMixin):
     """Класс окружность"""
 
     def move(self, x_pos, y_pos):
+        """Перемещение по координатам"""
         super().move(x_pos, y_pos)
 
     def coordinates(self):
+        """ Отображение текущих координат """
         return self.x_pos, self.y_pos
 
 
