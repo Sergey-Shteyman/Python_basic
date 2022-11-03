@@ -1,4 +1,5 @@
 class File:
+    """Кастомный контекст-менеджер для работы с файлами"""
 
     def __init__(self, name: str, mode: str, encoding=None):
         self.name = name

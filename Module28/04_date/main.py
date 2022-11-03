@@ -8,8 +8,8 @@ class Date:
 
     @classmethod
     def is_date_valid(cls, str_date):
-        d, m, y = cls.parse_date_str(str_date)
-        return 0 < d <= 31 and 0 < m <= 12 and y > 0
+        day, month, year = cls.parse_date_str(str_date)
+        return 0 < day <= 31 and 0 < month <= 12 and year > 0
 
     @classmethod
     def from_string(cls, str_date):

@@ -2,68 +2,76 @@ import math
 
 
 class Square:
-    def __init__(self, a):
+    def __init__(self, side):
         self.figure_name = "Квадрат"
-        self.a = a
+        self.side = side
 
     @property
     def square(self):
-        return self.a ** 2
+        """Возвращает площадь квадрата"""
+        return self.side ** 2
 
     @property
     def perimeter(self):
-        return 4 * self.a
+        """Возвращает периметр квадрата"""
+        return 4 * self.side
 
 
 class Triangle:
-    def __init__(self, a, h):
+    def __init__(self, side, height):
         self.figure_name = "Треугольник"
-        self.a = a
-        self.h = h
+        self.side = side
+        self.height = height
 
     @property
     def square(self):
-        return 0.5 * self.a * self.h
+        """Возвращает площадь треугольника"""
+        return 0.5 * self.side * self.height
 
     @property
     def perimeter(self):
-        return 2 * math.sqrt(self.h**2 + (self.a / 2)**2) + self.a
+        """Возвращает периметр треугольника"""
+        return 2 * math.sqrt(self.height ** 2 + (self.side / 2) ** 2) + self.side
 
 
 class Cube(Square):
-    def __init__(self, a):
-        super().__init__(a)
+    def __init__(self, side):
+        super().__init__(side)
         self.figure_name = 'Куб'
 
     @property
     def square(self):
+        """Возвращает площадь куба"""
         return 6 * super().square
 
     @property
     def perimeter(self):
+        """Возвращает периметр куба"""
         return 3 * super().perimeter
 
 
 class Pyramid(Triangle, Square):
-    def __init__(self, a, h):
-        super().__init__(a, h)
+    def __init__(self, side, height):
+        super().__init__(side, height)
         self.figure_name = 'Пирамида'
 
     @property
     def square(self):
+        """Возвращает площадь пирамиды"""
         side_square = 4 * super().square
-        base_square = self.a ** 2
+        base_square = self.side ** 2
         return side_square + base_square
 
     @property
     def perimeter(self):
-        return 2 * super().perimeter + 2 * self.a
+        """Возвращает периметр пирамиды"""
+        return 2 * super().perimeter + 2 * self.side
 
 
-p = Pyramid(6, 4)
-print(p.square)
-print(p.perimeter)
+pyramid = Pyramid(6, 4)
+print(pyramid.square)
+print(pyramid.perimeter)
 
-p = Cube(5)
-print(p.square)
-print(p.perimeter)
+cube = Cube(5)
+print(cube.square)
+print(cube.perimeter)
